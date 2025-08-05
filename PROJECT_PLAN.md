@@ -161,3 +161,13 @@ This document provides a detailed, step-by-step guide to implementing the custom
 
 3.  **Arrange your Dashboard:**
     *   Drag and resize the reports to create a visually appealing and informative layout.
+
+## Phase 6: New Features
+
+1.  **Dynamic Urgency Calculation:**
+    *   Create a new Client Script to call the `IncidentUtils` script include and dynamically set the urgency based on the impact.
+2.  **Email Notifications:**
+    *   Create a Business Rule to send an email to the caller when a new incident is created for them.
+    *   Create a Business Rule to send an email to the caller when their incident is resolved.
+3.  **Inbound Email Action:**
+    *   Create an Inbound Email Action to allow users to create incidents by sending an email to the ServiceNow instance.

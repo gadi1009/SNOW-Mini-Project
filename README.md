@@ -10,6 +10,9 @@ This project simulates a custom Incident Management process in ServiceNow. It's 
 *   **SLA Handling:** The Business Rule also attaches a Service Level Agreement (SLA) based on the incident's priority.
 *   **Simple Workflow:** A basic workflow to manage the incident lifecycle from "New" to "Resolved."
 *   **Dashboard Reporting:** Instructions on how to create a dashboard to monitor incident trends.
+*   **Dynamic Urgency Calculation:** Automatically sets the "Urgency" of an incident based on its "Impact."
+*   **Email Notifications:** Sends email notifications to the caller when a new incident is created and when their incident is resolved.
+*   **Inbound Email Action:** Allows users to create incidents by sending an email to the ServiceNow instance.
 
 ## Setup Instructions
 
