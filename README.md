@@ -13,6 +13,9 @@ This project simulates a custom Incident Management process in ServiceNow. It's 
 *   **Dynamic Urgency Calculation:** Automatically sets the "Urgency" of an incident based on its "Impact."
 *   **Email Notifications:** Sends email notifications to the caller when a new incident is created and when their incident is resolved.
 *   **Inbound Email Action:** Allows users to create incidents by sending an email to the ServiceNow instance.
+*   **Knowledge Base Integration:**
+    *   Automatically searches the Knowledge Base for relevant articles when an incident's short description is updated.
+    *   Provides a button to create a new knowledge article from a resolved incident.
 
 ## Setup Instructions
 

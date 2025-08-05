@@ -171,3 +171,10 @@ This document provides a detailed, step-by-step guide to implementing the custom
     *   Create a Business Rule to send an email to the caller when their incident is resolved.
 3.  **Inbound Email Action:**
     *   Create an Inbound Email Action to allow users to create incidents by sending an email to the ServiceNow instance.
+
+## Phase 7: Knowledge Base Integration
+
+1.  **Automatic Knowledge Search:**
+    *   Create a Business Rule that automatically searches the Knowledge Base when an incident's `short_description` is updated.
+2.  **"Create Knowledge Article" Button:**
+    *   Add a new UI Action (a button) that will appear on `Resolved` incidents.
