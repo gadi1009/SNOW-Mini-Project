@@ -1,0 +1,44 @@
+// Scripted REST API: Update Change Request State
+// Name: Update Change Request State
+// API ID: custom.create_change_request_api (assuming we add a new resource to the existing API)
+// HTTP Method: PUT
+// Relative Path: /update/{change_request_number}
+
+(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    // Get the change request number from the path parameter
+    var changeRequestNumber = request.pathParams.change_request_number;
+
+    // Get the new state from the request body
+    var body = request.body.data;
+    var newState = body.state;
+
+    // Find the change request
+    var change = new GlideRecord('change_request');
+    if (change.get('number', changeRequestNumber)) {
+
+        // Update the state
+        change.state = newState;
+        change.update();
+
+        // Prepare the response
+        response.setStatus(200); // OK
+        response.setBody({
+            'status': 'success',
+            'message': 'Change Request ' + changeRequestNumber + ' updated successfully',
+            'change_request': {
+                'number': change.number,
+                'state': change.state.getDisplayValue()
+            }
+        });
+
+    } else {
+        // Change Request not found
+        response.setStatus(404); // Not Found
+        response.setBody({
+            'status': 'error',
+            'message': 'Change Request ' + changeRequestNumber + ' not found'
+        });
+    }
+
+})(request, response);
